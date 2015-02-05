@@ -1,0 +1,56 @@
+<!--
+ * Copyright (c) 2014 SuccessFactors Inc. Dean Kessey. Feng Zuo. Scott McGhee. All rights reserved. 
+-->
+
+
+html {
+  overflow: hidden !important;
+}
+
+body {
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  width: 450px;
+  min-height: 597px !important;
+  overflow-y: hidden !important;
+}
+
+
+.ui-content {
+	height: 478px;
+	overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.keylogo {
+  background: url("../image/key2-25.png") no-repeat 5px 10px;
+  padding: 15px;
+}
+
+.ui-li-static :hover{
+  background-color: #F2F2F2;
+}
+.deleteBookmark {
+	position: absolute;
+	z-index: 3;
+	right: 50px;
+	line-height: 63px;
+}
+
+#bookmarks .openBookmark {
+	padding-right: 58px;
+}
+
+#import {
+}
+#importContent,
+#exportContent {
+  height: 260px !important;
+}
+
+#exportContent {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+}
