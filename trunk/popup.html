@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BizX Keychain</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="vendor/jquery-mobile-1.4.3/jquery.mobile-1.4.3.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="index" data-role="page">
+          <div data-role="header" class="ui-bar" data-position="fixed">
+            <h1>BizX Logins <span class="keylogo"></span></h1>
+            <a href="#editBookmark" id="addBookmark" data-role="button" data-theme="b" data-icon="plus" data-transition="none">Add New</a>
+          </div>
+          <div class="ui-content">
+            <ul id="bookmarks" data-filter="true" data-role="listview" data-inset="true" data-split-icon="gear"></ul>
+          </div>
+          <div data-role="footer" class="ui-bar" data-position="fixed">
+            <a href="#import" id="importLink" data-role="link" data-transition="none">Import</a>
+            <a href="#export" id="exportLink" data-role="link" data-transition="none">Export</a>
+          </div>
+        </div>
+        <div id="editBookmark" data-role="page">
+          <div data-role="header" class="ui-bar" data-position="fixed">
+            <a href="#index" data-icon="back" data-transition="none">Back</a>
+            <h1>Edit Bookmark</h1>
+          </div>
+          <div class="ui-content">
+            <form id="editForm">
+              <label for="fullURL">Full URL:</label>
+              <input id="fullURL" name="fullURL" placeholder="ex: https://qacand.successfactors.com/login?company=CID&username=cgrant&password=pwd">
+              <label for="baseURL">Base URL:</label>
+              <input id="baseURL" name="baseURL" placeholder="ex: https://qacand.successfactors.com">
+              <label for="company">Company Id:</label>
+              <input id="company" name="company" placeholder="ex: Company">
+              <label for="username">User Name:</label>
+              <input id="username" name="username" placeholder="ex: cgrant">
+              <label for="password">Password:</label>
+              <input id="password" name="password" placeholder="ex: pwd">
+              <label for="tags">Tags (comma separated):</label>
+              <input id="tags" name="tags" placeholder="ex: Org Chart, ECTv3">
+              <label for="deepLink">Deep Link:</label>
+              <select id="deepLink" name="deepLink" data-mini="true"><option value="">default</option></select>
+              <input type="submit" value="" data-role="none" style="display: none;">
+            </form>
+          </div>
+          <div data-role="footer" class="ui-bar">
+            <a href="#index" id="delete" data-role="button" data-icon="delete" data-transition="none">Delete</a>
+            <a href="#index" id="submit" data-role="button" data-icon="plus" class="ui-btn-right" data-theme="b" data-transition="none">Save</a>
+          </div>
+        </div>
+        <div id="import" data-role="page">
+          <div data-role="header" class="ui-bar">
+            <a href="#index" data-icon="back" data-transition="none">Back</a>
+            <h1>Import</h1>
+          </div>
+          <div class="ui-content">
+            <textarea id="importContent"></textarea>
+            <a href="#index" id="importSubmit" data-role="button" data-icon="plus" data-theme="b" data-inline="true" data-transition="none">Import the data</a>
+          </div>
+        </div>
+        <div id="export" data-role="page">
+          <div data-role="header" class="ui-bar">
+            <a href="#index" data-icon="back" data-transition="none">Back</a>
+            <h1>Export</h1>
+          </div>
+          <div class="ui-content">
+            Please copy below data and use it to import to another machine.
+            <textarea id="exportContent" readonly></textarea>
+          </div>
+        </div>
+        <script src="vendor/jquery-2.1.1.min.js"></script>
+        <script src="vendor/jquery-mobile-1.4.3/jquery.mobile-1.4.3.min.js"></script>
+        <script src="vendor/underscore.js"></script>
+        <script src="vendor/backbone.js"></script>
+        <script src="vendor/dateFormat.js"></script>
+        <script src="js/model.js"></script>
+        <script src="js/view.js"></script>
+        <script src="js/controller.js"></script>
+    </body>
+</html>
